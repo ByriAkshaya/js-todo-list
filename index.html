@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Smart To‑Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>My Smart To‑Do List</h1>
+
+    <!-- Input row: task + time + add button -->
+    <div class="input-row">
+      <input type="text" id="taskInput" placeholder="Enter a new task">
+      <input type="time" id="taskTime">
+      <button id="addTaskBtn">Add</button>
+    </div>
+
+    <!-- Task counter -->
+    <div id="taskCount"></div>
+
+    <!-- Tasks list -->
+    <ul id="taskList"></ul>
+
+    <!-- Empty state message -->
+    <p id="emptyMessage" class="empty-message">No tasks yet. Add your first task!</p>
+  </div>
+
+  <!-- Notification permission button (optional, for better UX) -->
+  <div class="notification-permission">
+    <button id="notifyPermissionBtn">EnableNotifications</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

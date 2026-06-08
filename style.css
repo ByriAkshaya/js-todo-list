@@ -1,0 +1,210 @@
+/* 1. Basic reset */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #f0f4ff, #e6f0ff, #d9e9ff);
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* 2. Main container: clean card with shadow */
+.container {
+  width: 450px;
+  max-width: 90%;
+  background: #ffffff;
+  padding: 32px 28px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(60, 80, 140, 0.15);
+  position: relative;
+}
+
+/* 3. Heading */
+h1 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 28px;
+  font-size: 30px;
+  color: #223;
+  font-weight: 700;
+}
+
+/* 4. Input row */
+.input-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 14px 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  background: #f9fbff;
+}
+
+input[type="text"]:focus {
+  border-color: #5a7;
+  background: #fff;
+}
+
+input[type="time"] {
+  padding: 14px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  background: #f9fbff;
+  cursor: pointer;
+}
+
+input[type="time"]:focus {
+  border-color: #5a7;
+  background: #fff;
+}
+
+button {
+  padding: 14px 20px;
+  border: none;
+  background: #4a6;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background 0.2s, transform 0.1s;
+}
+
+button:hover {
+  background: #3a5;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* 5. Task counter */
+#taskCount {
+  text-align: center;
+  font-size: 14px;
+  color: #667;
+  margin-bottom: 18px;
+  font-weight: 500;
+}
+
+/* 6. Task list */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f7f9ff;
+  border: 1px solid #e6e9f5;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+ul li:hover {
+  background: #f0f3ff;
+  transform: translateY(-2px);
+}
+
+/* Checkbox */
+ul li input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #4a6;
+}
+
+/* Task text */
+ul li span {
+  flex: 1;
+  font-size: 15px;
+  color: #333;
+}
+
+/* Done style: strikethrough + faded */
+ul li.done span {
+  text-decoration: line-through;
+  color: #999;
+  opacity: 0.7;
+}
+
+/* Overdue marker */
+ul li.overdue {
+  border-color: #f5c6c6;
+  background: #fff5f5;
+}
+
+ul li.overdue span {
+  color: #d63;
+}
+
+ul li.overdue::after {
+  content: 'Overdue';
+  font-size: 12px;
+  color: #d63;
+  background: #ffecec;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+/* Delete button */
+ul li .delete-btn {
+  padding: 8px 12px;
+  border: none;
+  background: #e74c3c;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background 0.2s;
+}
+
+ul li .delete-btn:hover {
+  background: #c0392b;
+}
+
+/* Empty message */
+.empty-message {
+  text-align: center;
+  color: #889;
+  font-size: 14px;
+  margin-top: 20px;
+  display: none;
+}
+
+/* Notification permission button */
+.notification-permission {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.notification-permission button {
+  padding: 10px 16px;
+  font-size: 13px;
+  background: #6a7;
+}
+
+.notification-permission button:hover {
+  background: #5a6;
+}
